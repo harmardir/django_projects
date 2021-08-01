@@ -50,8 +50,10 @@
 1. Create a file named urls.py inside the app directory.
 2. Inside urls.py, we’ll need to import a couple of things to call the view function when the URL is requested.
 At the top of urls.py import:   
-path module from django.urls      
-the functions from views.py.
+```python
+from django.urls import path
+from . import views
+```
 3. Create a list of patterns for Django to match URLs against. Create a list called urlpatterns and set it as a blank list.
 4. Inside the list,add a route to the quote() function using the path() function.  
 Since we want to have our random quote appear as our main page, provide an empty string, "", as the first argument to path(). Pass the view function, quote(), as the second argument.
