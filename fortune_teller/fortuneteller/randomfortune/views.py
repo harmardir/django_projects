@@ -14,7 +14,7 @@ import random
 def fortune(request):
     fortune = random.choice(fortuneList)
     context = {"fortune": fortune}
-    return render(request,"randomfortune/fortune.html")
+    return render(request,"randomfortune/fortune.html", context)
     
 
 fortuneList = [
