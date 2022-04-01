@@ -43,4 +43,10 @@ def setup(request):
 
 
 def index(request):
-    pass
+    results = Book.objects.all()
+    #get() expects a keyword argument, it only returns a single object 
+    # Most basic keyword argument: field__lookuptype=value
+    results = Book.objects.get(id=2)
+    return render(request, 'main/index.html', {'results': results})
+
+
